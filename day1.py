@@ -2007,13 +2007,7 @@ listright =[
 listleft.sort()
 listright.sort()
 
-complete_list: dict = {}
-
-for key in listleft:
-    for value in listright:
-        complete_list[key] = value
-        listright.remove(value)
-        break
+complete_list = dict(zip(listleft,listright))
 
 differences = []
 
@@ -2021,4 +2015,13 @@ for key in complete_list:
     differences.append(abs(key-complete_list[key]))
 
 print(sum(differences))
+
+#start of second half
+simularities = []
+
+for element in listleft:
+    simularity = listright.count(element)
+    simularities.append(element*simularity)
+
+print(sum(simularities))
 ...
