@@ -1,4 +1,4 @@
-list1 = [
+listleft = [
 85215,
 24582,
 98037,
@@ -1001,7 +1001,7 @@ list1 = [
 78957,
 ]
 
-list2 =[
+listright =[
 94333,
 34558,
 94333,
@@ -2004,15 +2004,15 @@ list2 =[
 74568,
 ]
 
-list1.sort()
-list2.sort()
+listleft.sort()
+listright.sort()
 
 complete_list: dict = {}
 
-for key in list1:
-    for value in list2:
+for key in listleft:
+    for value in listright:
         complete_list[key] = value
-        list2.remove(value)
+        listright.remove(value)
         break
 
 differences = []
